@@ -552,3 +552,93 @@ a:hover { color: #bfdbfe; }
   .row-2 { grid-template-columns: 1fr; }
   h1 { font-size: 36px; }
 }
+
+.kicker {
+  display: none;
+}
+/* =========================
+   RESPONSIVE (Mobile/Tablet)
+========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Hero: stack left/right */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+
+  /* Skills grid: 2 columns -> 1 */
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards: reduce spacing */
+  .cards {
+    gap: 16px;
+  }
+
+  /* Contact: stack form + info */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* Titles */
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.15;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  /* Make header/nav not overflow */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Horizontal scroll for nav links (simple and works great) */
+  .nav nav {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  .nav nav a {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  /* Buttons wrap nicely */
+  .btn-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Inputs full width */
+  .row-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Avatar smaller */
+  .avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* Reduce section padding if you have large padding */
+  .section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
